@@ -1,0 +1,62 @@
+
+Jenkins Sample docker run command:
+docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
+Jenkins admin user credentials:
+username - jenkins-user
+password - jayaram@8317
+fullname - vijay
+email - vijay.nagendrarao@gmail.com
+
+Types of Jenkins Projects:
+Freestyle Projects - are used for simple,single tasks. Ex- running tests
+Pipeline projects - can configure whole delivery cycle. Ex- test->build->package->deploy
+Multibranch Pipeline - same as pipeline projects except this is applied for multiple branches of same repository.
+
+Credentials in Jenkins:
+Credentials jenkin plugin is used to store and manage "CREDENTIALS" needed by jenkins centrally.
+There are 3 Credential Scopes
+System - Available only on Jenkins server.(Used mainly by Jenkins Admins)
+Global - Available for all the Jenkins jobs.Accessible everywhere across all the jobs.
+Project - Credentials available only for one project.
+
+Jenkins Global Credentials:
+username - global
+password - jayaram@8317
+ID - global
+
+Jenkins System Credentials:
+username - system
+password - jayaram@8317
+ID - system
+
+my-pipeline project credentials
+username - my-pipeline
+password - jayaram@8317
+ID - my-pipeline
+
+In summary, Jenkinsfile is a file that defines the steps of a single Jenkins job. At the same time, Jenkins Pipeline is a plugin suite allowing you to create and manage continuous delivery pipelines in Jenkins. Jenkins Pipeline can be defined using a Jenkinsfile, Blue Ocean, or the classic Jenkins UI
+
+Jenkins file can be scripted or declarative.
+
+There are two ways to trigger build in Jenkins.
+
+Push Notification - Version control tools/repository (like GitHub) notifies Jenkins on new commit. This is more efficient.
+Polling - Jenkins polls in regular intervals for changes in the repository.
+
+To use push notifications do the below steps.
+1) Install Jenkins plugin based on the Version control system/repository.
+2) Configure Repository server hostname.
+3) Set the Access token or Credential.
+
+Build tools in Jenkins:
+
+The build tools has to be installed as plugins.
+
+JENKINS FILE:
+
+what is Jenkins File?
+
+Jenkins file is a used to create the complete pipeline starting from creating a new jenkins job. Jenkinsfile is a way of achieving PIPELINE AS A CODE.
+Basically is basically a scripted pipeline.
+
